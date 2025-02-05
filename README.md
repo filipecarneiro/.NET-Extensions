@@ -13,7 +13,7 @@ This is a class library with .NET Extensions. It provides helper classes for Enu
 You can install the library via NuGet Package Manager:
 
 ```sh
-dotnet add package bitwiselab.net.extensions
+dotnet add package filipecarneiro.net.extensions
 ```
 
 ## Usage
