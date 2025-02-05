@@ -52,5 +52,12 @@ string host = UrlHelper.GetHost(url); // Output: "www.example.com"
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request on GitHub.
 
+## Build and Publish
+
+```sh
+dotnet pack -c Release
+dotnet nuget push bin/Release/filipecarneiro.net.extensions.*.nupkg --source https://api.nuget.org/v3/index.json --api-key <API_KEY>
+```
+
 ## License
 This project is licensed under the MIT License.

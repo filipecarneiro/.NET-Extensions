@@ -9,6 +9,23 @@
     <Title>.NET Extensions</Title>
     <Description>Common class library with .NET Extensions.</Description>
     <PackageTags>EnumHelper, StringHelper, UrlHelper</PackageTags>
+    <Authors>Filipe Carneiro</Authors>
+    <PackageProjectUrl>https://github.com/filipecarneiro/.NET-Extensions</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/filipecarneiro/.NET-Extensions.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
