@@ -37,15 +37,16 @@ jobs:
 
     - name: Display GitVersion outputs
       run: |
-        echo "Assembly File Version (environment variable AssemblySemFileVer): ${{ env.AssemblySemFileVer }}"
-        echo "Assembly Version (environment variable AssemblySemVer): ${{ env.AssemblySemVer }}"
+        echo "Assembly File Version (environment variable assemblySemFileVer): ${{ env.assemblySemFileVer }}"
+        echo "Assembly Version (environment variable assemblySemVer): ${{ env.assemblySemVer }}"
+        echo "MajorMinorPatch (environment variable majorMinorPatch): ${{ env.majorMinorPatch }}"
         echo "SemVer (environment variable semVer): ${{ env.semVer }}"
 
     - name: Restore dependencies
       run: dotnet restore
 
     - name: Build and Pack
-      run: dotnet pack --no-restore -c Release -p:PackageVersion=${{ env.semVer }} --output "artifacts"
+      run: dotnet pack --no-restore -c Release -p:PackageVersion=${{ env.majorMinorPatch }} --output "artifacts"
 
     - name: Publish NuGet package
       run: dotnet nuget push artifacts/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }}
