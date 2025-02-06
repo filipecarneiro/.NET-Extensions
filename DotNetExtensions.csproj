@@ -4,14 +4,14 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <PackageId>filipecarneiro.dotnet.extensions</PackageId>
+    <PackageId>filipecarneiro.dotnetextensions</PackageId>
     <Title>.NET Extensions</Title>
     <Description>Common class library with .NET Extensions.</Description>
     <PackageTags>EnumHelper, StringHelper, UrlHelper</PackageTags>
     <Authors>Filipe Carneiro</Authors>
-    <PackageProjectUrl>https://github.com/filipecarneiro/.NET-Extensions</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/filipecarneiro/DotNetExtensions</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <RepositoryUrl>https://github.com/filipecarneiro/.NET-Extensions.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/filipecarneiro/DotNetExtensions.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>

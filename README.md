@@ -13,7 +13,7 @@ This is a class library with .NET Extensions. It provides helper classes for Enu
 You can install the library via NuGet Package Manager:
 
 ```sh
-dotnet add package filipecarneiro.net.extensions
+dotnet add package filipecarneiro.dotnetextensions
 ```
 
 ## Usage
@@ -45,7 +45,7 @@ string result = input.FirstCharToUpper(); // Output: "Hello"
 ```csharp
 using Extensions;
 
-string url = "https://www.example.com";
+string url = "https://www.example.com/path/123";
 string host = UrlHelper.GetHost(url); // Output: "www.example.com"
 ```
 
@@ -54,7 +54,7 @@ Contributions are welcome! Please open an issue or submit a pull request on GitH
 
 ## Build and Publish
 
-Use the [Build and Push](https://github.com/filipecarneiro/.NET-Extensions/actions/workflows/build.yml) GitHub workflow Action to build and publish the library.
+Use the [Build and Push](https://github.com/filipecarneiro/DotNetExtensions/actions/workflows/build.yml) GitHub workflow Action to build and publish the library.
 
 ## License
 This project is licensed under the MIT License.
