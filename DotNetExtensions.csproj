@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <PackageId>filipecarneiro.net.extensions</PackageId>
+    <PackageId>filipecarneiro.dotnet.extensions</PackageId>
     <Title>.NET Extensions</Title>
     <Description>Common class library with .NET Extensions.</Description>
     <PackageTags>EnumHelper, StringHelper, UrlHelper</PackageTags>
