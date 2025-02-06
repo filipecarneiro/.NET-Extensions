@@ -4,6 +4,7 @@
         "filipecarneiro",
         "gittools",
         "gitversion",
-        "nupkg"
+        "nupkg",
+        "updateprojectfiles"
     ]
 }
