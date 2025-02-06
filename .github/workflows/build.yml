@@ -28,13 +28,16 @@ jobs:
     - name: Install GitVersion
       uses: gittools/actions/gitversion/setup@v3
       with:
-        versionSpec: '5.12.x'
+        versionSpec: '5.x'
 
     - name: Determine Version
       uses: gittools/actions/gitversion/execute@v3
       with:
         updateAssemblyInfo: true
 
+    - name: Update csproj version
+      run: dotnet gitversion /updateprojectfiles
+  
     - name: Display GitVersion outputs
       run: |
         echo "Assembly File Version (environment variable assemblySemFileVer): ${{ env.assemblySemFileVer }}"
