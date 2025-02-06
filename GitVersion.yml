@@ -1,5 +1,1 @@
-﻿mode: ContinuousDeployment
-branches:
-  main:
-    is-release-branch: true
-    increment: Patch
+﻿mode: Mainline
