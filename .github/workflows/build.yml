@@ -31,7 +31,6 @@ jobs:
         versionSpec: '6.0.x'
 
     - name: Determine Version
-      id:   gitversion # id to later be referenced
       uses: gittools/actions/gitversion/execute@v3
       with:
         updateAssemblyInfo: true
