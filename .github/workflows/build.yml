@@ -15,28 +15,36 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
+    - name: Checkout
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
+  
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
+
     - name: Install GitVersion
-      uses: gittools/actions/gitversion/setup@v0
+      uses: gittools/actions/gitversion/setup@v3
       with:
-        versionSpec: '5.x'
+        versionSpec: '6.1.x'
+
     - name: Determine Version
       id:   gitversion # id to later be referenced
-      uses: gittools/actions/gitversion/execute@v0
+      uses: gittools/actions/gitversion/execute@v3
+      with:
+        updateAssemblyInfo: true
+
     - name: Display GitVersion outputs
       run: |
         echo "SemVer (steps.gitversion.outputs.semVer): ${{ steps.gitversion.outputs.semVer }}"
         echo "SemVer (steps.gitversion.outputs.GitVersion_SemVer): ${{ steps.gitversion.outputs.GitVersion_SemVer }}"
         echo "SemVer (environment variable semVer): ${{ env.semVer }}"
         echo "SemVer (environment variable GitVersion_SemVer): ${{ env.GitVersion_SemVer }}"
+
     - name: Restore dependencies
       run: dotnet restore
+
     - name: Build
       run: dotnet build --no-restore
