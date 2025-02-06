@@ -54,10 +54,7 @@ Contributions are welcome! Please open an issue or submit a pull request on GitH
 
 ## Build and Publish
 
-```sh
-dotnet pack -c Release
-dotnet nuget push bin/Release/filipecarneiro.net.extensions.*.nupkg --source https://api.nuget.org/v3/index.json --api-key <API_KEY>
-```
+Use the [Build and Push](https://github.com/filipecarneiro/.NET-Extensions/actions/workflows/build.yml) GitHub workflow Action to build and publish the library.
 
 ## License
 This project is licensed under the MIT License.
