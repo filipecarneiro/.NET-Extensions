@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Reflection;
 
-namespace Extensions
+namespace DotNetExtensions
 {
     public static class EnumHelper
     {

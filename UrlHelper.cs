@@ -1,4 +1,4 @@
-﻿namespace Extensions
+﻿namespace DotNetExtensions
 {
     public static class UrlHelper
     {
