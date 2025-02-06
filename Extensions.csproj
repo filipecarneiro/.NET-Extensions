@@ -4,7 +4,6 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageId>filipecarneiro.net.extensions</PackageId>
     <Title>.NET Extensions</Title>
     <Description>Common class library with .NET Extensions.</Description>
