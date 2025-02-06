@@ -1,0 +1,40 @@
+# This workflow will build a .NET project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+
+name: Build and Publish
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+    - name: Install GitVersion
+      uses: gittools/actions/gitversion/setup@v0
+      with:
+        versionSpec: '5.x'
+    - name: Determine Version
+      id:   gitversion # id to later be referenced
+      uses: gittools/actions/gitversion/execute@v0
+    - name: Display GitVersion outputs
+      run: |
+        echo "SemVer (steps.gitversion.outputs.semVer): ${{ steps.gitversion.outputs.semVer }}"
+        echo "SemVer (steps.gitversion.outputs.GitVersion_SemVer): ${{ steps.gitversion.outputs.GitVersion_SemVer }}"
+        echo "SemVer (environment variable semVer): ${{ env.semVer }}"
+        echo "SemVer (environment variable GitVersion_SemVer): ${{ env.GitVersion_SemVer }}"
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --no-restore
