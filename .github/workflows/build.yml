@@ -46,12 +46,7 @@ jobs:
       run: dotnet restore
 
     - name: Build and Pack
-      run: dotnet pack --no-restore -p:PackageVersion=${{ env.semVer }} --output "artifacts"
+      run: dotnet pack --no-restore -c Release -p:PackageVersion=${{ env.semVer }} --output "artifacts"
 
     - name: Publish NuGet package
-      uses: nuget/nuget-publish@1
-      with:
-        nuget-api-key: ${{ secrets.NUGET_API_KEY }}
-        nuget-version: ${{ env.semVer }}
-        nuget-package: "artifacts/*.nupkg"
-        nuget-endpoint: "https://api.nuget.org/v3/index.json"
+      run: dotnet nuget push artifacts/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }}
