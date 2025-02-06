@@ -17,6 +17,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="DotNetExtensions.Tests\**" />
+    <EmbeddedResource Remove="DotNetExtensions.Tests\**" />
+    <None Remove="DotNetExtensions.Tests\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="GitVersion.Core" Version="6.1.0" />
   </ItemGroup>
 
