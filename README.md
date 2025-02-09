@@ -21,7 +21,7 @@ dotnet add package filipecarneiro.dotnetextensions
 ### EnumHelper
 
 ```csharp
-using Extensions;
+using DotNetExtensions;
 
 public enum SampleEnum
 {
@@ -35,7 +35,7 @@ var displayDescription = EnumHelper.GetDisplayDescription(SampleEnum.SampleValue
 ### StringHelper
 
 ```csharp
-using Extensions;
+using DotNetExtensions;
 
 string input = "hello";
 string result = input.FirstCharToUpper(); // Output: "Hello"
@@ -43,7 +43,7 @@ string result = input.FirstCharToUpper(); // Output: "Hello"
 ### UrlHelper
 
 ```csharp
-using Extensions;
+using DotNetExtensions;
 
 string url = "https://www.example.com/path/123";
 string host = UrlHelper.GetHost(url); // Output: "www.example.com"
